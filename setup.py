@@ -40,10 +40,9 @@ if any((exists(path) for path in mali_paths)):
 eo ={
     'darwin': "lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/liblfk-benchmark.dylib",
     'ios': 'lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/liblfk-benchmark.a',
-    'windows': 'lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/liblfk-benchmark.dll'
+    'windows': 'lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/liblfk-benchmark.dll',
     'linux': 'lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/liblfk-benchmark.so'
-}
- [platform]
+}[platform]
 
 setup(ext_modules = cythonize(Extension(
     "benchy",
