@@ -1,0 +1,11 @@
+.buildozer
+
+# buildozer output directory
+bin
+
+__pycache__
+venv
+venv-*
+
+# PyCharm project directory
+.idea/

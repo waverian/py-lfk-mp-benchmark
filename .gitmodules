@@ -1,0 +1,3 @@
+[submodule "lfk-mp-benchmark"]
+	path = lfk-mp-benchmark
+	url = ssh://git@rampage-101.waverian.com:10023/psyrykh/lfk-mp-benchmark
