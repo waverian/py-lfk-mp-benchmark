@@ -25,7 +25,7 @@ else:
     cstdarg = '-std=c99'
 
 if have_cython:
-    cymunk_files = ['benchy.pyx']
+    benchy_files = ['benchy.pyx']
     cmdclass = {'build_ext': build_ext}
 else:
     benchy_files = ['benchy.c']
@@ -33,7 +33,6 @@ else:
 
 ext = Extension('benchy',
     benchy_files,
-    sources=["benchy.pyx"],
     include_dirs=['lfk-mp-benchmark/lfk_benchmark/inc'],
     language="c",
     extra_link_args=["-Llfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/"],
