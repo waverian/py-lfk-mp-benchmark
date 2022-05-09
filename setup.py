@@ -33,6 +33,7 @@ else:
 
 ext = Extension('benchy',
     benchy_files,
+    # sources=["benchy.pyx"],
     include_dirs=['lfk-mp-benchmark/lfk_benchmark/inc'],
     language="c",
     extra_link_args=["-Llfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/"],
@@ -45,7 +46,7 @@ setup(
     author_email='akshay@kivy.org',
     cmdclass=cmdclass,
     packages=['benchy'],
-    package_data={'benchy': ['lfk-mp-benchmark/lfk_benchmark/inc/lfk.h',]},
+    package_data={'benchy': ['lfk-mp-benchmark/lfk_benchmark/inc/lfk.h', ]},
     package_dir={'benchy': 'benchy'},
     ext_modules=[ext],
     version='0.0.0.dev0'
