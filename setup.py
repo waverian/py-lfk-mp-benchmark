@@ -1,7 +1,7 @@
 from distutils.core import setup, Extension
 import sys
 from os import environ
-from os.path import dirname, join
+from os.path import dirname, join, abspath
 
 if environ.get('BENCHY_USE_SETUPTOOLS'):
     from setuptools import setup, Extension
@@ -31,10 +31,10 @@ else:
     benchy_files = ['benchy.c']
     cmdclass = {}
 
+root_dir = abspath(dirname(__file__))
 ext = Extension('benchy',
     benchy_files,
-    # sources=["benchy.pyx"],
-    include_dirs=['lfk-mp-benchmark/lfk_benchmark/inc'],
+    include_dirs=[f'{root_dir}/lfk-mp-benchmark/lfk_benchmark/inc'],
     language="c",
     extra_link_args=["-Llfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/"],
     libraries=["lfk-benchmark"])
