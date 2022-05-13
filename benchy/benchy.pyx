@@ -105,7 +105,8 @@ cdef class lfk_benchmark:
         if callback:
             callback_func = callback
         
-        self._setup_benchmark()
+        if not hasattr(self, 'handler'):
+            self._setup_benchmark()
         handler = self.handler
 
         Logger.debug('Benchy: Runing benchmark.')
@@ -122,7 +123,10 @@ cdef class lfk_benchmark:
         return results
 
     def _get_results(self):
+        if not hasattr(self, 'handler'):
+            self._setup_benchmark()
         handler = self.handler
+
         benchmark_version = benchmark_get_version(handler).decode('utf-8')
         Logger.debug(f'BenchMarkApp: Benchmark Version: {benchmark_version}')
         benchmark_date = benchmark_get_date(handler).decode('utf-8')
