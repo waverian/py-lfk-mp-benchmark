@@ -1,6 +1,11 @@
 import os
-from kivy.logger import Logger
-from kivy.utils import platform
+try:
+    from kivy.logger import Logger
+except:
+    from logging import Logger as NLogger
+    Logger = NLogger('PYLFKBenchmark')
+
+
 
 CPU_COUNT = 0 #0  is auto # os.cpu_count()
 LFKX_FAST = 'LFKX_FAST' in os.environ
@@ -75,6 +80,10 @@ cdef void progress_callback(void *data, int progress,
 cdef class lfk_benchmark:
 
     cdef benchmark_handler_t handler
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._setup_benchmark()
 
     def _setup_benchmark(self):
         Logger.debug('Benchmark App: benchmark init.')
