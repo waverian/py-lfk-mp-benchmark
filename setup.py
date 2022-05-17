@@ -35,6 +35,7 @@ root_dir = abspath(dirname(__file__))
 ext = Extension('benchy',
     benchy_files,
     include_dirs=[f'{root_dir}/lfk-mp-benchmark/lfk_benchmark/inc'],
+    extra_link_args=["-Llfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/"],
     language="c",
     libraries=["lfk-benchmark"],
     library_dirs=[f'{root_dir}/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark']
