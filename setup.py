@@ -50,6 +50,7 @@ setup(
     packages=['benchy'],
     package_data={'benchy': ['lfk-mp-benchmark/lfk_benchmark/inc/lfk.h', ]},
     package_dir={'benchy': 'benchy'},
+    options={'bdist_wheel':{'universal':'1'}},
     ext_modules=[ext],
     version='0.0.0.dev0'
 )
