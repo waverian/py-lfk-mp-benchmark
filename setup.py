@@ -31,15 +31,13 @@ else:
     benchy_files = ['benchy/benchy.c']
     cmdclass = {}
 
-MINGW_DIR = "C:/msys64/mingw64"
 root_dir = abspath(dirname(__file__))
 ext = Extension('benchy',
     benchy_files,
-    include_dirs=[f'{root_dir}/lfk-mp-benchmark/lfk_benchmark/inc', join(MINGW_DIR, "include")],
-    extra_link_args=["-Llfk-mp-benchmark/build_local/cmake_build/lfk_benchmark/"],
+    include_dirs=[f'{root_dir}/lfk-mp-benchmark/lfk_benchmark/inc'],
     language="c",
-    libraries=["lfk-benchmark"],
-    library_dirs=[f'{root_dir}/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark', join(MINGW_DIR, "lib")]
+    libraries=["liblfk-benchmark"],
+    library_dirs=[f'{root_dir}/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark']
     )
 
 setup(
