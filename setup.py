@@ -36,7 +36,7 @@ ext = Extension('benchy',
     benchy_files,
     include_dirs=[f'{root_dir}/lfk-mp-benchmark/lfk_benchmark/inc'],
     language="c",
-    libraries=["liblfk-benchmark"],
+    libraries=["liblfk-benchmark" if platform == 'win32' else "lfk-benchmark"],
     library_dirs=[f'{root_dir}/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark']
     )
 
