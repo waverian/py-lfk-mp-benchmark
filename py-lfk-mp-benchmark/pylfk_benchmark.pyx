@@ -1,14 +1,32 @@
+'''This is the python module for interfacing with lfk-mp-benchmark.
+
+Usage::
+
+    import lfkbenchmark
+    benchmark = lfkbenchmark.lfk_benchmark()
+    benchmark.console_run_benchmark()
+
+
+Repository: https://github.com/waverian/py-lfk-mp-benchmark
+
+For details of the C module look at https://github.com/waverian/lfk-mp-benchmark
+'''
+
 import os
-try:
-    from kivy.logger import Logger
-except:
-    from logging import Logger as NLogger
-    Logger = NLogger('PYLFKBenchmark')
+import logging
+
+log = logging.getLogger()
+log.setLevel(logging.NOTSET)
+hd = logging.StreamHandler()
+hd.setLevel(logging.NOTSET)
+log.addHandler(hd)
+Logger = log
 
 
-
-CPU_COUNT = 0 #0  is auto # os.cpu_count()
-LFKX_FAST = 'LFKX_FAST' in os.environ
+CPU_COUNT = 0 
+'''
+0:  is auto # os.cpu_count()
+'''
 
 ctypedef void (*benchmark_progress_callback_t)(void *data, int progress,
                                           const char *message)
@@ -70,14 +88,26 @@ cdef benchmark_progress_callback_handler_t benchmark_progress_callback_handler_t
 
 
 def callback_func(progress, message):
-    print(progress, message)
+    '''Default progress callback for displaying benchmark progress. Override this to 
+    Use your own callback.
 
-cdef void progress_callback(void *data, int progress,
-                                                  const char *message) nogil:
-        with gil:
-            callback_func(progress, message)
+    Arguments: 
+
+        `data`: usually Null, type `void`.
+        `progress`: Percentage benchmark progress, type: `int`.
+
+    '''
+
+    Logger.debug(f'LFKBenchmark: {progress}, {message}')
+
+
+cdef void progress_callback(void *data, int progress,const char *message) nogil:
+    with gil:
+        callback_func(progress, message)
 
 cdef class lfk_benchmark:
+    '''Wrapper around the lfkbenchmark module.
+    '''
 
     cdef benchmark_handler_t handler
 
@@ -101,6 +131,15 @@ cdef class lfk_benchmark:
         # Logger.debug('-3')
 
     def run_benchmark(self, callback=None):
+        '''Run benchmark from UI.
+        Warning::
+
+            This is a blocking operation. You should be running this through a thread/async task.
+
+        Arguments::
+        
+            `callback` pass a function here. Defaults to `None`.
+        '''
         Logger.debug('Benchy:  Setting up benchmark.')
         if callback:
             callback_func = callback
@@ -121,6 +160,13 @@ cdef class lfk_benchmark:
 
         # Logger.debug('Benchy: Returning results.')
         return results
+
+    def console_run_benchmark(self):
+        '''Run the benchmark from console without blocking the terminal.
+        '''
+        import threading
+        thread = threading.Thread(target=self.run_benchmark)
+        thread.start()
 
     def _get_results(self):
         if not hasattr(self, 'handler'):
