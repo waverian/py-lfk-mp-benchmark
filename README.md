@@ -3,7 +3,7 @@ This is a simple Python interface to lfk-mp-benchmark
 
 # INSTALL
 
-Make sure to either compile the lfk-mp-benchmark library in the root of this repo or just pass the path to the library for compilation::
+Make sure to either compile the lfk-mp-benchmark library in the root of this repo or just pass the path to the library for compilation.
 
     git --recurse-submodules clone `https://github.com/waverian/py-lfk-benchmark`
     cd pylfk-mp-benchmark
@@ -21,7 +21,7 @@ Make sure to either compile the lfk-mp-benchmark library in the root of this rep
 #### Manual instructions
 
 
-Let's build  lfk-mp-benchmark submodule::
+Let's build  lfk-mp-benchmark submodule.
 
 	mkdir -p lfk-mp-benchmark/build_local/cmake_build
     cd lfk-mp-benchmark/build_local/cmake_build
@@ -29,7 +29,7 @@ Let's build  lfk-mp-benchmark submodule::
     cmake --build .
 
 
-Check if compiled lib shows both architectures::
+Check if compiled lib shows both architectures.
 
 	file lfk_benchmark/liblfk-benchmark.dylib 
 
@@ -55,7 +55,7 @@ This wheel by default does not include the liblfk-benchmark.so to include this w
 
 
 The wheel in dir fixed_wheels should now be a univeral wheel that should be able dynamically load the benchmark lib.
-Let's test this::
+Let's test this.
 
 
 	pip install fixed_wheels/lfkbenchmark-0.1.0.dev0-cp39-cp39-macosx_10_9_universal2.whl
