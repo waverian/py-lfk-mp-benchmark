@@ -1,7 +1,11 @@
 .buildozer
+.DS_Store
 
 # buildozer output directory
 bin
+# wheel/setup directory
+build
+lfkbenchmark.egg-info
 
 __pycache__
 venv
