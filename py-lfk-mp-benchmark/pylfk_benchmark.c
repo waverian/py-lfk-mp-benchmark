@@ -922,8 +922,8 @@ static const char *__pyx_f[] = {
 /*--- Type declarations ---*/
 struct __pyx_obj_12lfkbenchmark_lfk_benchmark;
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":31
- * '''
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":53
+ * __version__ = '1.0.0-beta1'
  * 
  * ctypedef void (*benchmark_progress_callback_t)(void *data, int progress,             # <<<<<<<<<<<<<<
  *                                           const char *message)
@@ -931,7 +931,7 @@ struct __pyx_obj_12lfkbenchmark_lfk_benchmark;
  */
 typedef void (*__pyx_t_12lfkbenchmark_benchmark_progress_callback_t)(void *, int, char const *);
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":108
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":130
  *         callback_func(progress, message)
  * 
  * cdef class lfk_benchmark:             # <<<<<<<<<<<<<<
@@ -1411,8 +1411,10 @@ static const char __pyx_k_geometric[] = "geometric";
 static const char __pyx_k_getLogger[] = "getLogger";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_threading[] = "threading";
+static const char __pyx_k_version_2[] = "__version__";
 static const char __pyx_k_addHandler[] = "addHandler";
 static const char __pyx_k_core_count[] = "core_count";
+static const char __pyx_k_1_0_0_beta1[] = "1.0.0-beta1";
 static const char __pyx_k_get_results[] = "_get_results";
 static const char __pyx_k_LFKBenchmark[] = "LFKBenchmark: ";
 static const char __pyx_k_lfkbenchmark[] = "lfkbenchmark";
@@ -1440,6 +1442,7 @@ static const char __pyx_k_This_is_the_python_module_for_in[] = "This is the pyth
 static const char __pyx_k_py_lfk_mp_benchmark_pylfk_benchm[] = "py-lfk-mp-benchmark/pylfk_benchmark.pyx";
 static const char __pyx_k_self_handler_cannot_be_converted[] = "self.handler cannot be converted to a Python object for pickling";
 static PyObject *__pyx_kp_u_;
+static PyObject *__pyx_kp_u_1_0_0_beta1;
 static PyObject *__pyx_kp_u_BenchMarkApp_Benchmark_Compiler;
 static PyObject *__pyx_kp_u_BenchMarkApp_Benchmark_Core_Coun;
 static PyObject *__pyx_kp_u_BenchMarkApp_Benchmark_Version;
@@ -1508,6 +1511,7 @@ static PyObject *__pyx_n_s_target;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_threading;
 static PyObject *__pyx_n_u_version;
+static PyObject *__pyx_n_s_version_2;
 static PyObject *__pyx_pf_12lfkbenchmark_callback_func(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_progress, PyObject *__pyx_v_message); /* proto */
 static int __pyx_pf_12lfkbenchmark_13lfk_benchmark___init__(struct __pyx_obj_12lfkbenchmark_lfk_benchmark *__pyx_v_self, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs); /* proto */
 static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struct __pyx_obj_12lfkbenchmark_lfk_benchmark *__pyx_v_self); /* proto */
@@ -1525,7 +1529,7 @@ static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_codeobj__5;
 /* Late includes */
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":90
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":112
  * 
  * 
  * def callback_func(progress, message):             # <<<<<<<<<<<<<<
@@ -1569,11 +1573,11 @@ static PyObject *__pyx_pw_12lfkbenchmark_1callback_func(PyObject *__pyx_self, Py
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_message)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("callback_func", 1, 2, 2, 1); __PYX_ERR(0, 90, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("callback_func", 1, 2, 2, 1); __PYX_ERR(0, 112, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "callback_func") < 0)) __PYX_ERR(0, 90, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "callback_func") < 0)) __PYX_ERR(0, 112, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -1586,7 +1590,7 @@ static PyObject *__pyx_pw_12lfkbenchmark_1callback_func(PyObject *__pyx_self, Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("callback_func", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 90, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("callback_func", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 112, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("lfkbenchmark.callback_func", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -1613,19 +1617,19 @@ static PyObject *__pyx_pf_12lfkbenchmark_callback_func(CYTHON_UNUSED PyObject *_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("callback_func", 0);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":101
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":123
  *     '''
  * 
  *     Logger.debug(f'LFKBenchmark: {progress}, {message}')             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Logger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Logger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_debug); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_debug); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = 0;
   __pyx_t_5 = 127;
@@ -1633,7 +1637,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_callback_func(CYTHON_UNUSED PyObject *_
   __pyx_t_4 += 14;
   __Pyx_GIVEREF(__pyx_kp_u_LFKBenchmark);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_kp_u_LFKBenchmark);
-  __pyx_t_6 = __Pyx_PyObject_FormatSimple(__pyx_v_progress, __pyx_empty_unicode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_FormatSimple(__pyx_v_progress, __pyx_empty_unicode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_5 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_6) > __pyx_t_5) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_6) : __pyx_t_5;
   __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_6);
@@ -1644,14 +1648,14 @@ static PyObject *__pyx_pf_12lfkbenchmark_callback_func(CYTHON_UNUSED PyObject *_
   __pyx_t_4 += 2;
   __Pyx_GIVEREF(__pyx_kp_u_);
   PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_kp_u_);
-  __pyx_t_6 = __Pyx_PyObject_FormatSimple(__pyx_v_message, __pyx_empty_unicode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_FormatSimple(__pyx_v_message, __pyx_empty_unicode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_5 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_6) > __pyx_t_5) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_6) : __pyx_t_5;
   __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_6);
   PyTuple_SET_ITEM(__pyx_t_2, 3, __pyx_t_6);
   __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyUnicode_Join(__pyx_t_2, 4, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyUnicode_Join(__pyx_t_2, 4, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -1667,12 +1671,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_callback_func(CYTHON_UNUSED PyObject *_
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":90
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":112
  * 
  * 
  * def callback_func(progress, message):             # <<<<<<<<<<<<<<
@@ -1696,7 +1700,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_callback_func(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":104
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":126
  * 
  * 
  * cdef void progress_callback(void *data, int progress,const char *message) nogil:             # <<<<<<<<<<<<<<
@@ -1721,7 +1725,7 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
   #endif
   __Pyx_RefNannySetupContext("progress_callback", 1);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":105
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":127
  * 
  * cdef void progress_callback(void *data, int progress,const char *message) nogil:
  *     with gil:             # <<<<<<<<<<<<<<
@@ -1735,18 +1739,18 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
         #endif
         /*try:*/ {
 
-          /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":106
+          /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":128
  * cdef void progress_callback(void *data, int progress,const char *message) nogil:
  *     with gil:
  *         callback_func(progress, message)             # <<<<<<<<<<<<<<
  * 
  * cdef class lfk_benchmark:
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_callback_func); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L7_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_callback_func); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_progress); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L7_error)
+          __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_progress); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_3);
-          __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_message); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 106, __pyx_L7_error)
+          __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_message); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 128, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_4);
           __pyx_t_5 = NULL;
           __pyx_t_6 = 0;
@@ -1763,7 +1767,7 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
           #if CYTHON_FAST_PYCALL
           if (PyFunction_Check(__pyx_t_2)) {
             PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, __pyx_t_4};
-            __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L7_error)
+            __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L7_error)
             __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1773,7 +1777,7 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
           #if CYTHON_FAST_PYCCALL
           if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
             PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, __pyx_t_4};
-            __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L7_error)
+            __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L7_error)
             __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1781,7 +1785,7 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
           } else
           #endif
           {
-            __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 106, __pyx_L7_error)
+            __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_7);
             if (__pyx_t_5) {
               __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -1792,7 +1796,7 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
             PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_t_4);
             __pyx_t_3 = 0;
             __pyx_t_4 = 0;
-            __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L7_error)
+            __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           }
@@ -1800,7 +1804,7 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         }
 
-        /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":105
+        /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":127
  * 
  * cdef void progress_callback(void *data, int progress,const char *message) nogil:
  *     with gil:             # <<<<<<<<<<<<<<
@@ -1840,7 +1844,7 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
     __pyx_L5:;
   }
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":104
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":126
  * 
  * 
  * cdef void progress_callback(void *data, int progress,const char *message) nogil:             # <<<<<<<<<<<<<<
@@ -1864,7 +1868,7 @@ static void __pyx_f_12lfkbenchmark_progress_callback(CYTHON_UNUSED void *__pyx_v
   #endif
 }
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":114
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":136
  *     cdef benchmark_handler_t handler
  * 
  *     def __init__(self, *args, **kwargs):             # <<<<<<<<<<<<<<
@@ -1905,14 +1909,14 @@ static int __pyx_pf_12lfkbenchmark_13lfk_benchmark___init__(struct __pyx_obj_12l
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":115
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":137
  * 
  *     def __init__(self, *args, **kwargs):
  *         super().__init__(*args, **kwargs)             # <<<<<<<<<<<<<<
  *         self._setup_benchmark()
  * 
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(((PyObject *)__pyx_ptype_12lfkbenchmark_lfk_benchmark));
   __Pyx_GIVEREF(((PyObject *)__pyx_ptype_12lfkbenchmark_lfk_benchmark));
@@ -1920,28 +1924,28 @@ static int __pyx_pf_12lfkbenchmark_13lfk_benchmark___init__(struct __pyx_obj_12l
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_self));
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_init); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_init); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyDict_Copy(__pyx_v_kwargs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_2 = PyDict_Copy(__pyx_v_kwargs); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_v_args, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_v_args, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":116
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":138
  *     def __init__(self, *args, **kwargs):
  *         super().__init__(*args, **kwargs)
  *         self._setup_benchmark()             # <<<<<<<<<<<<<<
  * 
  *     def _setup_benchmark(self):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setup_benchmark); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setup_benchmark); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -1955,12 +1959,12 @@ static int __pyx_pf_12lfkbenchmark_13lfk_benchmark___init__(struct __pyx_obj_12l
   }
   __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":114
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":136
  *     cdef benchmark_handler_t handler
  * 
  *     def __init__(self, *args, **kwargs):             # <<<<<<<<<<<<<<
@@ -1982,7 +1986,7 @@ static int __pyx_pf_12lfkbenchmark_13lfk_benchmark___init__(struct __pyx_obj_12l
   return __pyx_r;
 }
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":118
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":140
  *         self._setup_benchmark()
  * 
  *     def _setup_benchmark(self):             # <<<<<<<<<<<<<<
@@ -2019,16 +2023,16 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_setup_benchmark", 0);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":119
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":141
  * 
  *     def _setup_benchmark(self):
  *         Logger.debug('Benchmark App: benchmark init.')             # <<<<<<<<<<<<<<
  *         self.handler = handler = benchmark_init()
  *         Logger.debug('Benchmark App: set execution time.')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Logger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 119, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Logger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_debug); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 119, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_debug); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2043,12 +2047,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_u_Benchmark_App_benchmark_init) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_u_Benchmark_App_benchmark_init);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 119, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":120
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":142
  *     def _setup_benchmark(self):
  *         Logger.debug('Benchmark App: benchmark init.')
  *         self.handler = handler = benchmark_init()             # <<<<<<<<<<<<<<
@@ -2059,16 +2063,16 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
   __pyx_v_self->handler = __pyx_t_4;
   __pyx_v_handler = __pyx_t_4;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":121
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":143
  *         Logger.debug('Benchmark App: benchmark init.')
  *         self.handler = handler = benchmark_init()
  *         Logger.debug('Benchmark App: set execution time.')             # <<<<<<<<<<<<<<
  *         benchmark_set_execution_time(handler, 1.00000)# 1 execution per sec
  *         Logger.debug('Benchmark App: set core count to auto.')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Logger); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Logger); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_debug); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_debug); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -2083,12 +2087,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_u_Benchmark_App_set_execution_time) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_u_Benchmark_App_set_execution_time);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":122
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":144
  *         self.handler = handler = benchmark_init()
  *         Logger.debug('Benchmark App: set execution time.')
  *         benchmark_set_execution_time(handler, 1.00000)# 1 execution per sec             # <<<<<<<<<<<<<<
@@ -2097,16 +2101,16 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
  */
   benchmark_set_execution_time(__pyx_v_handler, 1.00000);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":123
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":145
  *         Logger.debug('Benchmark App: set execution time.')
  *         benchmark_set_execution_time(handler, 1.00000)# 1 execution per sec
  *         Logger.debug('Benchmark App: set core count to auto.')             # <<<<<<<<<<<<<<
  *         benchmark_set_core_count(handler, CPU_COUNT)
  *         Logger.debug('Benchmark App: set progress callback.')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Logger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Logger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_debug); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_debug); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2121,34 +2125,34 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_u_Benchmark_App_set_core_count_to) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_u_Benchmark_App_set_core_count_to);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 123, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":124
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":146
  *         benchmark_set_execution_time(handler, 1.00000)# 1 execution per sec
  *         Logger.debug('Benchmark App: set core count to auto.')
  *         benchmark_set_core_count(handler, CPU_COUNT)             # <<<<<<<<<<<<<<
  *         Logger.debug('Benchmark App: set progress callback.')
  *         callbackHandler = benchmark_progress_callback_handler_tf
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_CPU_COUNT); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_CPU_COUNT); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyInt_As_unsigned_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_As_unsigned_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   benchmark_set_core_count(__pyx_v_handler, __pyx_t_5);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":125
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":147
  *         Logger.debug('Benchmark App: set core count to auto.')
  *         benchmark_set_core_count(handler, CPU_COUNT)
  *         Logger.debug('Benchmark App: set progress callback.')             # <<<<<<<<<<<<<<
  *         callbackHandler = benchmark_progress_callback_handler_tf
  *         # Logger.debug('-5')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Logger); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Logger); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_debug); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_debug); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -2163,12 +2167,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_u_Benchmark_App_set_progress_callb) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_u_Benchmark_App_set_progress_callb);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":126
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":148
  *         benchmark_set_core_count(handler, CPU_COUNT)
  *         Logger.debug('Benchmark App: set progress callback.')
  *         callbackHandler = benchmark_progress_callback_handler_tf             # <<<<<<<<<<<<<<
@@ -2177,7 +2181,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
  */
   __pyx_v_callbackHandler = __pyx_v_12lfkbenchmark_benchmark_progress_callback_handler_tf;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":129
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":151
  *         # Logger.debug('-5')
  *         # callbackHandler.data = None
  *         callbackHandler.callback = progress_callback             # <<<<<<<<<<<<<<
@@ -2186,7 +2190,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
  */
   __pyx_v_callbackHandler.callback = __pyx_f_12lfkbenchmark_progress_callback;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":130
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":152
  *         # callbackHandler.data = None
  *         callbackHandler.callback = progress_callback
  *         benchmark_set_progress_callback(handler, callbackHandler)             # <<<<<<<<<<<<<<
@@ -2195,7 +2199,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
  */
   benchmark_set_progress_callback(__pyx_v_handler, __pyx_v_callbackHandler);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":118
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":140
  *         self._setup_benchmark()
  * 
  *     def _setup_benchmark(self):             # <<<<<<<<<<<<<<
@@ -2218,7 +2222,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_2_setup_benchmark(struc
   return __pyx_r;
 }
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":133
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":155
  *         # Logger.debug('-3')
  * 
  *     def run_benchmark(self, callback=None):             # <<<<<<<<<<<<<<
@@ -2259,7 +2263,7 @@ static PyObject *__pyx_pw_12lfkbenchmark_13lfk_benchmark_5run_benchmark(PyObject
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "run_benchmark") < 0)) __PYX_ERR(0, 133, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "run_benchmark") < 0)) __PYX_ERR(0, 155, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2273,7 +2277,7 @@ static PyObject *__pyx_pw_12lfkbenchmark_13lfk_benchmark_5run_benchmark(PyObject
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("run_benchmark", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 133, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("run_benchmark", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 155, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("lfkbenchmark.lfk_benchmark.run_benchmark", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2303,16 +2307,16 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("run_benchmark", 0);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":143
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":165
  *             `callback` pass a function here. Defaults to `None`.
  *         '''
  *         Logger.debug('Benchy:  Setting up benchmark.')             # <<<<<<<<<<<<<<
  *         if callback:
  *             callback_func = callback
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Logger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Logger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_debug); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_debug); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2327,22 +2331,22 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_u_Benchy_Setting_up_benchmark) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_u_Benchy_Setting_up_benchmark);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":144
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":166
  *         '''
  *         Logger.debug('Benchy:  Setting up benchmark.')
  *         if callback:             # <<<<<<<<<<<<<<
  *             callback_func = callback
  * 
  */
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_callback); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_callback); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 166, __pyx_L1_error)
   if (__pyx_t_4) {
 
-    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":145
+    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":167
  *         Logger.debug('Benchy:  Setting up benchmark.')
  *         if callback:
  *             callback_func = callback             # <<<<<<<<<<<<<<
@@ -2352,7 +2356,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
     __Pyx_INCREF(__pyx_v_callback);
     __pyx_v_callback_func = __pyx_v_callback;
 
-    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":144
+    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":166
  *         '''
  *         Logger.debug('Benchy:  Setting up benchmark.')
  *         if callback:             # <<<<<<<<<<<<<<
@@ -2361,25 +2365,25 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
  */
   }
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":147
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":169
  *             callback_func = callback
  * 
  *         if not hasattr(self, 'handler'):             # <<<<<<<<<<<<<<
  *             self._setup_benchmark()
  *         handler = self.handler
  */
-  __pyx_t_4 = __Pyx_HasAttr(((PyObject *)__pyx_v_self), __pyx_n_u_handler); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 147, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_HasAttr(((PyObject *)__pyx_v_self), __pyx_n_u_handler); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 169, __pyx_L1_error)
   __pyx_t_5 = ((!(__pyx_t_4 != 0)) != 0);
   if (__pyx_t_5) {
 
-    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":148
+    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":170
  * 
  *         if not hasattr(self, 'handler'):
  *             self._setup_benchmark()             # <<<<<<<<<<<<<<
  *         handler = self.handler
  * 
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setup_benchmark); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setup_benchmark); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -2393,12 +2397,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
     }
     __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":147
+    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":169
  *             callback_func = callback
  * 
  *         if not hasattr(self, 'handler'):             # <<<<<<<<<<<<<<
@@ -2407,7 +2411,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
  */
   }
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":149
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":171
  *         if not hasattr(self, 'handler'):
  *             self._setup_benchmark()
  *         handler = self.handler             # <<<<<<<<<<<<<<
@@ -2417,16 +2421,16 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
   __pyx_t_6 = __pyx_v_self->handler;
   __pyx_v_handler = __pyx_t_6;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":151
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":173
  *         handler = self.handler
  * 
  *         Logger.debug('Benchy: Runing benchmark.')             # <<<<<<<<<<<<<<
  *         with nogil:
  *             benchmark_run(handler)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Logger); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 151, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Logger); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_debug); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 151, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_debug); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -2441,12 +2445,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_u_Benchy_Runing_benchmark) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_u_Benchy_Runing_benchmark);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 151, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":152
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":174
  * 
  *         Logger.debug('Benchy: Runing benchmark.')
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2461,7 +2465,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
       #endif
       /*try:*/ {
 
-        /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":153
+        /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":175
  *         Logger.debug('Benchy: Runing benchmark.')
  *         with nogil:
  *             benchmark_run(handler)             # <<<<<<<<<<<<<<
@@ -2471,7 +2475,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
         benchmark_run(__pyx_v_handler);
       }
 
-      /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":152
+      /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":174
  * 
  *         Logger.debug('Benchy: Runing benchmark.')
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2490,14 +2494,14 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
       }
   }
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":156
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":178
  * 
  *         # Logger.debug('Benchy: Getting results.')
  *         results = self._get_results()             # <<<<<<<<<<<<<<
  * 
  *         # Logger.debug('Benchy: Cleaning up.')
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_results); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_results); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2511,20 +2515,20 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_results = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":159
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":181
  * 
  *         # Logger.debug('Benchy: Cleaning up.')
  *         self._cleanup()             # <<<<<<<<<<<<<<
  * 
  *         # Logger.debug('Benchy: Returning results.')
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_cleanup); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_cleanup); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2538,12 +2542,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":162
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":184
  * 
  *         # Logger.debug('Benchy: Returning results.')
  *         return results             # <<<<<<<<<<<<<<
@@ -2555,7 +2559,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
   __pyx_r = __pyx_v_results;
   goto __pyx_L0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":133
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":155
  *         # Logger.debug('-3')
  * 
  *     def run_benchmark(self, callback=None):             # <<<<<<<<<<<<<<
@@ -2578,7 +2582,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_4run_benchmark(struct _
   return __pyx_r;
 }
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":164
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":186
  *         return results
  * 
  *     def console_run_benchmark(self):             # <<<<<<<<<<<<<<
@@ -2613,48 +2617,48 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_6console_run_benchmark(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("console_run_benchmark", 0);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":167
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":189
  *         '''Run the benchmark from console without blocking the terminal.
  *         '''
  *         import threading             # <<<<<<<<<<<<<<
  *         thread = threading.Thread(target=self.run_benchmark)
  *         thread.start()
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_threading, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_threading, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_threading = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":168
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":190
  *         '''
  *         import threading
  *         thread = threading.Thread(target=self.run_benchmark)             # <<<<<<<<<<<<<<
  *         thread.start()
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_threading, __pyx_n_s_Thread); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_threading, __pyx_n_s_Thread); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_run_benchmark); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_run_benchmark); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_target, __pyx_t_3) < 0) __PYX_ERR(0, 168, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_target, __pyx_t_3) < 0) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_thread = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":169
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":191
  *         import threading
  *         thread = threading.Thread(target=self.run_benchmark)
  *         thread.start()             # <<<<<<<<<<<<<<
  * 
  *     def _get_results(self):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_thread, __pyx_n_s_start); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_thread, __pyx_n_s_start); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2668,12 +2672,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_6console_run_benchmark(
   }
   __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":164
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":186
  *         return results
  * 
  *     def console_run_benchmark(self):             # <<<<<<<<<<<<<<
@@ -2698,7 +2702,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_6console_run_benchmark(
   return __pyx_r;
 }
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":171
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":193
  *         thread.start()
  * 
  *     def _get_results(self):             # <<<<<<<<<<<<<<
@@ -2744,25 +2748,25 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_get_results", 0);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":172
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":194
  * 
  *     def _get_results(self):
  *         if not hasattr(self, 'handler'):             # <<<<<<<<<<<<<<
  *             self._setup_benchmark()
  *         handler = self.handler
  */
-  __pyx_t_1 = __Pyx_HasAttr(((PyObject *)__pyx_v_self), __pyx_n_u_handler); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 172, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_HasAttr(((PyObject *)__pyx_v_self), __pyx_n_u_handler); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 194, __pyx_L1_error)
   __pyx_t_2 = ((!(__pyx_t_1 != 0)) != 0);
   if (__pyx_t_2) {
 
-    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":173
+    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":195
  *     def _get_results(self):
  *         if not hasattr(self, 'handler'):
  *             self._setup_benchmark()             # <<<<<<<<<<<<<<
  *         handler = self.handler
  * 
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setup_benchmark); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_setup_benchmark); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 195, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -2776,12 +2780,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":172
+    /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":194
  * 
  *     def _get_results(self):
  *         if not hasattr(self, 'handler'):             # <<<<<<<<<<<<<<
@@ -2790,7 +2794,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
  */
   }
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":174
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":196
  *         if not hasattr(self, 'handler'):
  *             self._setup_benchmark()
  *         handler = self.handler             # <<<<<<<<<<<<<<
@@ -2800,7 +2804,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
   __pyx_t_6 = __pyx_v_self->handler;
   __pyx_v_handler = __pyx_t_6;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":176
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":198
  *         handler = self.handler
  * 
  *         benchmark_version = benchmark_get_version(handler).decode('utf-8')             # <<<<<<<<<<<<<<
@@ -2808,27 +2812,27 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
  *         benchmark_date = benchmark_get_date(handler).decode('utf-8')
  */
   __pyx_t_7 = benchmark_get_version(__pyx_v_handler);
-  __pyx_t_3 = __Pyx_decode_c_string(__pyx_t_7, 0, strlen(__pyx_t_7), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_decode_c_string(__pyx_t_7, 0, strlen(__pyx_t_7), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_t_3);
   __pyx_v_benchmark_version = __pyx_t_3;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":177
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":199
  * 
  *         benchmark_version = benchmark_get_version(handler).decode('utf-8')
  *         Logger.debug(f'BenchMarkApp: Benchmark Version: {benchmark_version}')             # <<<<<<<<<<<<<<
  *         benchmark_date = benchmark_get_date(handler).decode('utf-8')
  *         benchmark_compiler = benchmark_get_compiler_info(handler).decode('utf-8')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Logger); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Logger); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_debug); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_debug); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_v_benchmark_version, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_v_benchmark_version, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = __Pyx_PyUnicode_Concat(__pyx_kp_u_BenchMarkApp_Benchmark_Version, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyUnicode_Concat(__pyx_kp_u_BenchMarkApp_Benchmark_Version, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -2844,12 +2848,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
   __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, __pyx_t_8) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_8);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":178
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":200
  *         benchmark_version = benchmark_get_version(handler).decode('utf-8')
  *         Logger.debug(f'BenchMarkApp: Benchmark Version: {benchmark_version}')
  *         benchmark_date = benchmark_get_date(handler).decode('utf-8')             # <<<<<<<<<<<<<<
@@ -2857,13 +2861,13 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
  *         Logger.debug(f'BenchMarkApp: Benchmark Compiler: {benchmark_compiler}')
  */
   __pyx_t_9 = benchmark_get_date(__pyx_v_handler);
-  __pyx_t_3 = __Pyx_decode_c_string(__pyx_t_9, 0, strlen(__pyx_t_9), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_decode_c_string(__pyx_t_9, 0, strlen(__pyx_t_9), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_t_3);
   __pyx_v_benchmark_date = __pyx_t_3;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":179
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":201
  *         Logger.debug(f'BenchMarkApp: Benchmark Version: {benchmark_version}')
  *         benchmark_date = benchmark_get_date(handler).decode('utf-8')
  *         benchmark_compiler = benchmark_get_compiler_info(handler).decode('utf-8')             # <<<<<<<<<<<<<<
@@ -2871,27 +2875,27 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
  *         benchmark_core_count = benchmark_get_core_count(handler)
  */
   __pyx_t_10 = benchmark_get_compiler_info(__pyx_v_handler);
-  __pyx_t_3 = __Pyx_decode_c_string(__pyx_t_10, 0, strlen(__pyx_t_10), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_decode_c_string(__pyx_t_10, 0, strlen(__pyx_t_10), NULL, NULL, PyUnicode_DecodeUTF8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_t_3);
   __pyx_v_benchmark_compiler = __pyx_t_3;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":180
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":202
  *         benchmark_date = benchmark_get_date(handler).decode('utf-8')
  *         benchmark_compiler = benchmark_get_compiler_info(handler).decode('utf-8')
  *         Logger.debug(f'BenchMarkApp: Benchmark Compiler: {benchmark_compiler}')             # <<<<<<<<<<<<<<
  *         benchmark_core_count = benchmark_get_core_count(handler)
  *         Logger.debug(f'BenchMarkApp: Benchmark Core Count: {benchmark_core_count}')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_Logger); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_Logger); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_debug); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_debug); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_v_benchmark_compiler, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_v_benchmark_compiler, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_BenchMarkApp_Benchmark_Compiler, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_BenchMarkApp_Benchmark_Compiler, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -2907,12 +2911,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
   __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_8, __pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 180, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":181
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":203
  *         benchmark_compiler = benchmark_get_compiler_info(handler).decode('utf-8')
  *         Logger.debug(f'BenchMarkApp: Benchmark Compiler: {benchmark_compiler}')
  *         benchmark_core_count = benchmark_get_core_count(handler)             # <<<<<<<<<<<<<<
@@ -2921,21 +2925,21 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
  */
   __pyx_v_benchmark_core_count = benchmark_get_core_count(__pyx_v_handler);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":182
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":204
  *         Logger.debug(f'BenchMarkApp: Benchmark Compiler: {benchmark_compiler}')
  *         benchmark_core_count = benchmark_get_core_count(handler)
  *         Logger.debug(f'BenchMarkApp: Benchmark Core Count: {benchmark_core_count}')             # <<<<<<<<<<<<<<
  *         cdef const lfk_full_result_t *results = benchmark_get_results(handler)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Logger); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Logger); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_debug); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_debug); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_PyUnicode_From_unsigned_int(__pyx_v_benchmark_core_count, 0, ' ', 'd'); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyUnicode_From_unsigned_int(__pyx_v_benchmark_core_count, 0, ' ', 'd'); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_5 = __Pyx_PyUnicode_Concat(__pyx_kp_u_BenchMarkApp_Benchmark_Core_Coun, __pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyUnicode_Concat(__pyx_kp_u_BenchMarkApp_Benchmark_Core_Coun, __pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __pyx_t_8 = NULL;
@@ -2951,12 +2955,12 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
   __pyx_t_3 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_8, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
   __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":183
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":205
  *         benchmark_core_count = benchmark_get_core_count(handler)
  *         Logger.debug(f'BenchMarkApp: Benchmark Core Count: {benchmark_core_count}')
  *         cdef const lfk_full_result_t *results = benchmark_get_results(handler)             # <<<<<<<<<<<<<<
@@ -2965,7 +2969,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
  */
   __pyx_v_results = benchmark_get_results(__pyx_v_handler);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":187
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":209
  * 
  * 
  *         return {             # <<<<<<<<<<<<<<
@@ -2974,71 +2978,71 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":188
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":210
  * 
  *         return {
  *             'version': benchmark_version, 'date': benchmark_date,             # <<<<<<<<<<<<<<
  *             'compiler': benchmark_compiler, 'core_count': benchmark_core_count,
  *             'singlecore_results': results.singlecore_result,
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_version, __pyx_v_benchmark_version) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_date, __pyx_v_benchmark_date) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_version, __pyx_v_benchmark_version) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_date, __pyx_v_benchmark_date) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":189
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":211
  *         return {
  *             'version': benchmark_version, 'date': benchmark_date,
  *             'compiler': benchmark_compiler, 'core_count': benchmark_core_count,             # <<<<<<<<<<<<<<
  *             'singlecore_results': results.singlecore_result,
  *             'multicore_results': results.multicore_result,
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_compiler, __pyx_v_benchmark_compiler) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyInt_From_unsigned_int(__pyx_v_benchmark_core_count); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_compiler, __pyx_v_benchmark_compiler) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_unsigned_int(__pyx_v_benchmark_core_count); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_core_count, __pyx_t_4) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_core_count, __pyx_t_4) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":190
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":212
  *             'version': benchmark_version, 'date': benchmark_date,
  *             'compiler': benchmark_compiler, 'core_count': benchmark_core_count,
  *             'singlecore_results': results.singlecore_result,             # <<<<<<<<<<<<<<
  *             'multicore_results': results.multicore_result,
  *             'results': results.lfk_run_result}
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_results->singlecore_result); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_results->singlecore_result); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_singlecore_results, __pyx_t_4) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_singlecore_results, __pyx_t_4) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":191
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":213
  *             'compiler': benchmark_compiler, 'core_count': benchmark_core_count,
  *             'singlecore_results': results.singlecore_result,
  *             'multicore_results': results.multicore_result,             # <<<<<<<<<<<<<<
  *             'results': results.lfk_run_result}
  * 
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_results->multicore_result); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_results->multicore_result); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_multicore_results, __pyx_t_4) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_multicore_results, __pyx_t_4) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":192
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":214
  *             'singlecore_results': results.singlecore_result,
  *             'multicore_results': results.multicore_result,
  *             'results': results.lfk_run_result}             # <<<<<<<<<<<<<<
  * 
  *     def _cleanup(self):
  */
-  __pyx_t_4 = __Pyx_carray_to_py_lfk_run_result_t(__pyx_v_results->lfk_run_result, 4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_carray_to_py_lfk_run_result_t(__pyx_v_results->lfk_run_result, 4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_results, __pyx_t_4) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_results, __pyx_t_4) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":171
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":193
  *         thread.start()
  * 
  *     def _get_results(self):             # <<<<<<<<<<<<<<
@@ -3063,7 +3067,7 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_8_get_results(struct __
   return __pyx_r;
 }
 
-/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":194
+/* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":216
  *             'results': results.lfk_run_result}
  * 
  *     def _cleanup(self):             # <<<<<<<<<<<<<<
@@ -3089,14 +3093,14 @@ static PyObject *__pyx_pf_12lfkbenchmark_13lfk_benchmark_10_cleanup(struct __pyx
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_cleanup", 0);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":195
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":217
  * 
  *     def _cleanup(self):
  *         benchmark_cleanup(self.handler)             # <<<<<<<<<<<<<<
  */
   benchmark_cleanup(__pyx_v_self->handler);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":194
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":216
  *             'results': results.lfk_run_result}
  * 
  *     def _cleanup(self):             # <<<<<<<<<<<<<<
@@ -3813,6 +3817,7 @@ static struct PyModuleDef __pyx_moduledef = {
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_, __pyx_k_, sizeof(__pyx_k_), 0, 1, 0, 0},
+  {&__pyx_kp_u_1_0_0_beta1, __pyx_k_1_0_0_beta1, sizeof(__pyx_k_1_0_0_beta1), 0, 1, 0, 0},
   {&__pyx_kp_u_BenchMarkApp_Benchmark_Compiler, __pyx_k_BenchMarkApp_Benchmark_Compiler, sizeof(__pyx_k_BenchMarkApp_Benchmark_Compiler), 0, 1, 0, 0},
   {&__pyx_kp_u_BenchMarkApp_Benchmark_Core_Coun, __pyx_k_BenchMarkApp_Benchmark_Core_Coun, sizeof(__pyx_k_BenchMarkApp_Benchmark_Core_Coun), 0, 1, 0, 0},
   {&__pyx_kp_u_BenchMarkApp_Benchmark_Version, __pyx_k_BenchMarkApp_Benchmark_Version, sizeof(__pyx_k_BenchMarkApp_Benchmark_Version), 0, 1, 0, 0},
@@ -3881,10 +3886,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_threading, __pyx_k_threading, sizeof(__pyx_k_threading), 0, 0, 1, 1},
   {&__pyx_n_u_version, __pyx_k_version, sizeof(__pyx_k_version), 0, 1, 0, 1},
+  {&__pyx_n_s_version_2, __pyx_k_version_2, sizeof(__pyx_k_version_2), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_super = __Pyx_GetBuiltinName(__pyx_n_s_super); if (!__pyx_builtin_super) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_builtin_super = __Pyx_GetBuiltinName(__pyx_n_s_super); if (!__pyx_builtin_super) __PYX_ERR(0, 137, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(1, 116, __pyx_L1_error)
   return 0;
@@ -3915,17 +3921,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":90
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":112
  * 
  * 
  * def callback_func(progress, message):             # <<<<<<<<<<<<<<
  *     '''Default progress callback for displaying benchmark progress. Override this to
  *     Use your own callback.
  */
-  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_n_s_progress, __pyx_n_s_message); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_n_s_progress, __pyx_n_s_message); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_py_lfk_mp_benchmark_pylfk_benchm, __pyx_n_s_callback_func, 90, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_py_lfk_mp_benchmark_pylfk_benchm, __pyx_n_s_callback_func, 112, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3980,15 +3986,15 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_12lfkbenchmark_lfk_benchmark) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_12lfkbenchmark_lfk_benchmark) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_12lfkbenchmark_lfk_benchmark.tp_print = 0;
   #endif
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_12lfkbenchmark_lfk_benchmark.tp_dictoffset && __pyx_type_12lfkbenchmark_lfk_benchmark.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_12lfkbenchmark_lfk_benchmark.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_lfk_benchmark, (PyObject *)&__pyx_type_12lfkbenchmark_lfk_benchmark) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_12lfkbenchmark_lfk_benchmark) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_lfk_benchmark, (PyObject *)&__pyx_type_12lfkbenchmark_lfk_benchmark) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_12lfkbenchmark_lfk_benchmark) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
   __pyx_ptype_12lfkbenchmark_lfk_benchmark = &__pyx_type_12lfkbenchmark_lfk_benchmark;
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -4223,169 +4229,178 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":15
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":35
  * '''
  * 
  * import os             # <<<<<<<<<<<<<<
  * import logging
  * 
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_os, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_os, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_1) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_1) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":16
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":36
  * 
  * import os
  * import logging             # <<<<<<<<<<<<<<
  * 
  * log = logging.getLogger()
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_logging, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_logging, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_logging, __pyx_t_1) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_logging, __pyx_t_1) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":18
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":38
  * import logging
  * 
  * log = logging.getLogger()             # <<<<<<<<<<<<<<
  * log.setLevel(logging.NOTSET)
  * hd = logging.StreamHandler()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logging); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logging); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getLogger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getLogger); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_log, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_log, __pyx_t_1) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":19
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":39
  * 
  * log = logging.getLogger()
  * log.setLevel(logging.NOTSET)             # <<<<<<<<<<<<<<
  * hd = logging.StreamHandler()
  * hd.setLevel(logging.NOTSET)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_setLevel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_setLevel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logging); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logging); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_NOTSET); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_NOTSET); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":20
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":40
  * log = logging.getLogger()
  * log.setLevel(logging.NOTSET)
  * hd = logging.StreamHandler()             # <<<<<<<<<<<<<<
  * hd.setLevel(logging.NOTSET)
  * log.addHandler(hd)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logging); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logging); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_StreamHandler); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_StreamHandler); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_hd, __pyx_t_1) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_hd, __pyx_t_1) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":21
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":41
  * log.setLevel(logging.NOTSET)
  * hd = logging.StreamHandler()
  * hd.setLevel(logging.NOTSET)             # <<<<<<<<<<<<<<
  * log.addHandler(hd)
  * Logger = log
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_hd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_hd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_setLevel); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_setLevel); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logging); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logging); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_NOTSET); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_NOTSET); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":22
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":42
  * hd = logging.StreamHandler()
  * hd.setLevel(logging.NOTSET)
  * log.addHandler(hd)             # <<<<<<<<<<<<<<
  * Logger = log
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_addHandler); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_addHandler); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_hd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_hd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":23
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":43
  * hd.setLevel(logging.NOTSET)
  * log.addHandler(hd)
  * Logger = log             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_log); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_log); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Logger, __pyx_t_3) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Logger, __pyx_t_3) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":26
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":46
  * 
  * 
  * CPU_COUNT = 0             # <<<<<<<<<<<<<<
  * '''
  * 0:  is auto # os.cpu_count()
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CPU_COUNT, __pyx_int_0) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CPU_COUNT, __pyx_int_0) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":90
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":51
+ * '''
+ * 
+ * __version__ = '1.0.0-beta1'             # <<<<<<<<<<<<<<
+ * 
+ * ctypedef void (*benchmark_progress_callback_t)(void *data, int progress,
+ */
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_version_2, __pyx_kp_u_1_0_0_beta1) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
+
+  /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":112
  * 
  * 
  * def callback_func(progress, message):             # <<<<<<<<<<<<<<
  *     '''Default progress callback for displaying benchmark progress. Override this to
  *     Use your own callback.
  */
-  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_12lfkbenchmark_1callback_func, NULL, __pyx_n_s_lfkbenchmark); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_12lfkbenchmark_1callback_func, NULL, __pyx_n_s_lfkbenchmark); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_callback_func, __pyx_t_3) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_callback_func, __pyx_t_3) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "py-lfk-mp-benchmark/pylfk_benchmark.pyx":1
- * '''This is the python module for interfacing with lfk-mp-benchmark.             # <<<<<<<<<<<<<<
+ * # Copyright (c) 2022 Waverian Team             # <<<<<<<<<<<<<<
  * 
- * Usage::
+ * # Permission is hereby granted, free of charge, to any person obtaining a copy
  */
   __pyx_t_3 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
