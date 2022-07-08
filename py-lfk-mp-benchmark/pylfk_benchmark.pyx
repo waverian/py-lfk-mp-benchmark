@@ -133,18 +133,22 @@ cdef class lfk_benchmark:
 
     cdef benchmark_handler_t handler
 
+    cdef bint benchmark_initialised 
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.benchmark_initialised = False
         self._setup_benchmark()
 
     def _setup_benchmark(self):
-        Logger.debug('Benchmark App: benchmark init.')
+        Logger.debug('LFKBenchmark: Setup benchmark init.')
         self.handler = handler = benchmark_init()
-        Logger.debug('Benchmark App: set execution time.')
+        self.benchmark_initialised = True
+        Logger.debug('LFKBenchmark: set execution time.')
         benchmark_set_execution_time(handler, 1.00000)# 1 execution per sec
-        Logger.debug('Benchmark App: set core count to auto.')
+        Logger.debug('LFKBenchmark: set core count to auto.')
         benchmark_set_core_count(handler, CPU_COUNT)
-        Logger.debug('Benchmark App: set progress callback.')
+        Logger.debug('LFKBenchmark: set progress callback.')
         callbackHandler = benchmark_progress_callback_handler_tf
         # Logger.debug('-5')
         # callbackHandler.data = None
@@ -162,46 +166,48 @@ cdef class lfk_benchmark:
         
             `callback` pass a function here. Defaults to `None`.
         '''
-        Logger.debug('Benchy:  Setting up benchmark.')
+        Logger.debug('LFKBenchmark:  Setting up benchmark.')
         if callback:
             callback_func = callback
         
-        if not hasattr(self, 'handler'):
-            self._setup_benchmark()
+        self._setup_benchmark()
         handler = self.handler
 
-        Logger.debug('Benchy: Runing benchmark.')
+        Logger.debug('LFKBenchmark: Runing benchmark.')
         with nogil:
             benchmark_run(handler)
 
-        # Logger.debug('Benchy: Getting results.')
+        Logger.debug('LFKBenchmark: Getting results.')
         results = self._get_results()
 
-        # Logger.debug('Benchy: Cleaning up.')
+        Logger.debug('LFKBenchmark: Cleaning up.')
         self._cleanup()
 
-        # Logger.debug('Benchy: Returning results.')
+        Logger.debug('LFKBenchmark: Returning results.')
         return results
+
+    def run_print_benchmark(self):
+        print(self.run_benchmark())
 
     def console_run_benchmark(self):
         '''Run the benchmark from console without blocking the terminal.
         '''
         import threading
-        thread = threading.Thread(target=self.run_benchmark)
+        thread = threading.Thread(target=self.run_print_benchmark)
         thread.start()
 
     def _get_results(self):
-        if not hasattr(self, 'handler'):
+        if not self.benchmark_initialised:
             self._setup_benchmark()
         handler = self.handler
 
         benchmark_version = benchmark_get_version(handler).decode('utf-8')
-        Logger.debug(f'BenchMark Version: {benchmark_version}')
+        Logger.debug(f'LFKBenchMark Version: {benchmark_version}')
         benchmark_date = benchmark_get_date(handler).decode('utf-8')
         benchmark_compiler = benchmark_get_compiler_info(handler).decode('utf-8')
-        Logger.debug(f'BenchMark Compiler: {benchmark_compiler}')
+        Logger.debug(f'LFKBenchMark Compiler: {benchmark_compiler}')
         benchmark_core_count = benchmark_get_core_count(handler)
-        Logger.debug(f'BenchMark Core Count: {benchmark_core_count}')
+        Logger.debug(f'LFKBenchMark Core Count: {benchmark_core_count}')
         cdef const lfk_full_result_t *results = benchmark_get_results(handler)
 
 
