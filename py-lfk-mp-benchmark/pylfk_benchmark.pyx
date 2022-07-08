@@ -196,12 +196,12 @@ cdef class lfk_benchmark:
         handler = self.handler
 
         benchmark_version = benchmark_get_version(handler).decode('utf-8')
-        Logger.debug(f'BenchMarkApp: Benchmark Version: {benchmark_version}')
+        Logger.debug(f'BenchMark Version: {benchmark_version}')
         benchmark_date = benchmark_get_date(handler).decode('utf-8')
         benchmark_compiler = benchmark_get_compiler_info(handler).decode('utf-8')
-        Logger.debug(f'BenchMarkApp: Benchmark Compiler: {benchmark_compiler}')
+        Logger.debug(f'BenchMark Compiler: {benchmark_compiler}')
         benchmark_core_count = benchmark_get_core_count(handler)
-        Logger.debug(f'BenchMarkApp: Benchmark Core Count: {benchmark_core_count}')
+        Logger.debug(f'BenchMark Core Count: {benchmark_core_count}')
         cdef const lfk_full_result_t *results = benchmark_get_results(handler)
 
 
