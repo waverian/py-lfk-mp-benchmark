@@ -48,7 +48,7 @@ CPU_COUNT = 0
 0:  is auto # os.cpu_count()
 '''
 
-__version__ = '1.0.0-beta1'
+__version__ = '1.0.0-beta2'
 
 ctypedef void (*benchmark_progress_callback_t)(void *data, int progress,
                                           const char *message)
