@@ -3,13 +3,29 @@ This is a simple Python interface to lfk-mp-benchmark
 
 # INSTALL
 
+## Binary wheels
+
+    pip install lfkbenchmark 
+
+Please make sure to use the correct wheel for your architecture.
+
+## From Source
+
 Make sure to either compile the lfk-mp-benchmark library in the root of this repo or just pass the path to the library for compilation.
 
     git --recurse-submodules clone `https://github.com/waverian/py-lfk-benchmark`
-    cd pylfk-mp-benchmark
-	cd lfk-mp-benchmark
+    cd py-lfk-mp-benchmark
 
-## Compile lfk-mp-benchmark
+### isolate your build env with a Virtual Environment
+
+    python3 venv venv-lfk
+    source venv-lfk/bin/acivate
+
+### Install Dependencies
+
+    pip install cython
+
+### Compile lfk-mp-benchmark
 
 ### osx
 
