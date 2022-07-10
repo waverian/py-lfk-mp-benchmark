@@ -3,11 +3,6 @@
 # let's build lfk-mp-benchmark
 ./tools/build_lfk-mp-benchmark_multiarch_lib.sh
 
-# Install deps
-python3 -m venv temp-venv
-source temp-venv/bin/activate
-pip install wheel cython
-
 # remove intermediates
 rm -rf build
 
@@ -16,11 +11,15 @@ python setup.py build_ext -t build/
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	# Linux
-	pip install auditwheel
+	# Install deps
+	python -m venv temp-venv
+	source temp-venv/bin/activate
+	pip install wheel cython
+
 	echo
 	echo "Building wheels"
 	echo
-        LD_LIBRARY_PATH=lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark pip wheel . -w build/wheels
+        pip wheel . -w build/wheels
 	echo
 	echo "**wheels available in build/wheels**"
 	echo $(pwd)/build/wheels/$(ls build/wheels/)
@@ -28,8 +27,13 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	echo auditing...
 	echo
 	LFK_WHEEL=$(ls build/wheels/)
-	auditwheel show build/wheels/$LFK_WHEEL
+	LD_LIBRARY_PATH=lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark auditwheel repair build/wheels/$LFK_WHEEL -w fixed_wheels
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+	# Install deps
+	python3 -m venv temp-venv
+	source temp-venv/bin/activate
+	pip install wheel cython
+
         # Mac OSX
 	pip wheel . -w build/wheels
 	pip install delocate
