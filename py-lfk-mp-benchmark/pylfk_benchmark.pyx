@@ -127,7 +127,7 @@ cdef void progress_callback(void *data, int progress,const char *message) nogil:
     with gil:
         callback_func(progress, message)
 
-cdef class lfk_benchmark:
+cdef class Benchmark:
     '''Wrapper around the lfkbenchmark module.
     '''
 
