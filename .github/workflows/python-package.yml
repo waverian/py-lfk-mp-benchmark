@@ -1,0 +1,67 @@
+name: Manylinux wheels
+
+on:
+  push:
+  pull_request:
+  create:
+  schedule:
+    - cron:  '23 1 * * *'
+
+jobs:
+  manylinux_wheel_create:
+    env:
+      CIBW_ENVIRONMENT_LINUX: "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/project/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark:/usr/local/lib"
+      CIBW_BUILD_VERBOSITY_LINUX: 3
+      CIBW_BUILD:  ${{ matrix.cibw_build }}
+      CIBW_ARCHS: ${{ matrix.cibw_archs }}
+      CIBW_BEFORE_BUILD_LINUX: ./tools/build_lfk-mp-benchmark_multiarch_lib.sh
+#       CIBW_REPAIR_WHEEL_COMMAND: 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark:/usr/local/lib auditwheel repair -w {dest_dir} {wheel}'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        cibw_archs: [x86_64]
+        cibw_build: ['cp37-manylinux_x86_64 cp38-manylinux_x86_64 cp39-manylinux_x86_64 cp310-manylinux_x86_64']
+        include:
+           - os: ubuntu-latest
+             cibw_archs: aarch64
+             cibw_build: cp37-manylinux_aarch64
+           - os: ubuntu-latest
+             cibw_archs: aarch64
+             cibw_build: cp38-manylinux_aarch64
+           - os: ubuntu-latest
+             cibw_archs: aarch64
+             cibw_build: cp39-manylinux_aarch64
+           - os: ubuntu-latest
+             cibw_archs: aarch64
+             cibw_build: cp310-manylinux_aarch64
+#     if: github.event_name == 'schedule' || (github.event_name == 'create' && github.event.ref_type == 'tag') || contains(github.event.head_commit.message, '[build wheel]') || contains(github.event.head_commit.message, '[build wheel linux]') || contains(github.event.pull_request.title, '[build wheel]') || contains(github.event.pull_request.title, '[build wheel linux]')
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Set up QEMU
+      if: ${{ matrix.cibw_archs == 'aarch64' }}
+      uses: docker/setup-qemu-action@v1
+    - name: Generate version metadata
+      run: |
+        current_time=$(python -c "from time import time; from os import environ; print(int(environ.get('SOURCE_DATE_EPOCH', time())))")
+        date=$(python -c "from datetime import datetime; print(datetime.utcfromtimestamp($current_time).strftime('%Y%m%d'))")
+        echo "Version date is: $date"
+        git_tag=$(git rev-parse HEAD)
+        echo "Git tag is: $git_tag"
+    - name: Install cibuildwheel
+      run: |
+        python -m pip install cibuildwheel==2.3.1
+    - name: Make wheels
+      run: |
+        python -m cibuildwheel --output-dir wheelhouse
+    - name: Upload wheels as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: manylinux_wheels
+        path: ./wheelhouse/*.whl
