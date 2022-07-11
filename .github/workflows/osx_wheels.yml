@@ -1,0 +1,50 @@
+name: OSX wheels
+
+on:
+  push:
+  pull_request:
+  create:
+  schedule:
+    - cron:  '23 1 * * *'
+
+env:
+  CC: clang
+  CXX: clang
+  FFLAGS: '-ff2c'
+
+jobs:
+  osx_wheels_create:
+#     if: github.event_name == 'schedule' || (github.event_name == 'create' && github.event.ref_type == 'tag') || contains(github.event.head_commit.message, '[build wheel]') || contains(github.event.head_commit.message, '[build wheel osx]') || contains(github.event.pull_request.title, '[build wheel]') || contains(github.event.pull_request.title, '[build wheel osx]')
+    env:
+      CIBW_BUILD: "cp37-macosx_x86_64 cp38-macosx_universal2 cp39-macosx_universal2 cp310-macosx_universal2"
+      CIBW_ARCHS_MACOS: "x86_64 universal2"
+      CIBW_BEFORE_BUILD_MACOS: ./tools/build_lfk-mp-benchmark_multiarch_lib.sh
+      CIBW_REPAIR_WHEEL_COMMAND_MACOS: >
+        DYLD_LIBRARY_PATH=$REPAIR_LIBRARY_PATH delocate-listdeps {wheel} &&
+        DYLD_LIBRARY_PATH=$REPAIR_LIBRARY_PATH delocate-wheel --require-archs {delocate_archs} -w {dest_dir} {wheel}
+    runs-on: ${{ matrix.runs_on }}
+    strategy:
+      matrix:
+        include:
+          - runs_on: macos-11
+            python: '3.9'
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      # Needs to be skipped on our self-hosted runners tagged as 'apple-silicon-m1'
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python }}
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install cibuildwheel
+      run: |
+        python -m pip install cibuildwheel==2.3.1
+    - name: Build wheels
+      run: |
+        export REPAIR_LIBRARY_PATH=~/work/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark
+        python -m cibuildwheel --output-dir wheelhouse
+    - uses: actions/upload-artifact@v2
+      with:
+        name: osx_wheels
+        path: ./wheelhouse/*.whl
