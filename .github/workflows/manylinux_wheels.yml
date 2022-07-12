@@ -10,12 +10,12 @@ on:
 jobs:
   manylinux_wheel_create:
     env:
-      CIBW_ENVIRONMENT_LINUX: "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/project/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark:/usr/local/lib"
+      CIBW_ENVIRONMENT_LINUX: "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/project/lfk-mp-benchmark/build/lfk_benchmark:/usr/local/lib"
       CIBW_BUILD_VERBOSITY_LINUX: 3
       CIBW_BUILD:  ${{ matrix.cibw_build }}
       CIBW_ARCHS: ${{ matrix.cibw_archs }}
       CIBW_BEFORE_BUILD_LINUX: ./tools/build_lfk-mp-benchmark_multiarch_lib.sh
-#       CIBW_REPAIR_WHEEL_COMMAND: 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark:/usr/local/lib auditwheel repair -w {dest_dir} {wheel}'
+#       CIBW_REPAIR_WHEEL_COMMAND: 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lfk-mp-benchmark/build/lfk_benchmark:/usr/local/lib auditwheel repair -w {dest_dir} {wheel}'
     runs-on: ubuntu-latest
     strategy:
       matrix:

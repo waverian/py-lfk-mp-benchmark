@@ -6,7 +6,7 @@ jobs:
   build_wheels_win:
     # if: github.event_name == 'schedule' || (github.event_name == 'create' && github.event.ref_type == 'tag') || contains(github.event.head_commit.message, '[build wheel]') || contains(github.event.head_commit.message, '[build wheel osx]') || contains(github.event.pull_request.title, '[build wheel]') || contains(github.event.pull_request.title, '[build wheel osx]')
     env:
-      CIBW_ENVIRONMENT_WINDOWS: "PATH=$PATH:/D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark:/usr/local/lib"
+      CIBW_ENVIRONMENT_WINDOWS: "PATH=$PATH:/D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build/lfk_benchmark:/usr/local/lib"
       CIBW_BUILD: "cp37-win_amd64 cp37-win32 cp38-win32 cp38-win_amd64 cp39-win32 cp39-win_amd64 cp310-win32 cp310-win_amd64"
       CIBW_ARCHS_WINDOWS: "x86 AMD64"
     runs-on: ${{ matrix.os }}

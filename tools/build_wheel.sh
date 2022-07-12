@@ -27,7 +27,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	echo auditing...
 	echo
 	LFK_WHEEL=$(ls build/wheels/)
-	LD_LIBRARY_PATH=lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark auditwheel repair build/wheels/$LFK_WHEEL -w fixed_wheels
+	LD_LIBRARY_PATH=lfk-mp-benchmark/build/lfk_benchmark auditwheel repair build/wheels/$LFK_WHEEL -w fixed_wheels
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	# Install deps
 	python3 -m venv temp-venv
@@ -38,7 +38,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	pip wheel . -w build/wheels
 	pip install delocate
         LFK_WHEEL=$(ls build/wheels/)
-        DYLD_LIBRARY_PATH=lfk-mp-benchmark/build_local/cmake_build/lfk_benchmark delocate-wheel -w build/fixed_wheels -v build/wheels/"$LFK_WHEEL"
+        DYLD_LIBRARY_PATH=lfk-mp-benchmark/build/lfk_benchmark delocate-wheel -w build/fixed_wheels -v build/wheels/"$LFK_WHEEL"
 	echo
 	echo "wheels available in build/fixed_wheels directory"
 	echo $(ls build/fixed_wheels/)
