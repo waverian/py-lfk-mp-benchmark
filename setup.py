@@ -77,7 +77,10 @@ ext = CythonExtension('lfkbenchmark',
     include_dirs=[f'{root_dir}/lfk-mp-benchmark/lfk_benchmark/inc'],
     language="c",
     libraries=["liblfk-benchmark" if platform == 'win32' else "lfk-benchmark"],
-    library_dirs=[f'{root_dir}/lfk-mp-benchmark/build/lfk_benchmark' + ('/Release' if platform == 'win32' else '')]
+    library_dirs=[
+        f'{root_dir}/lfk-mp-benchmark/build/lfk_benchmark',
+        f'{root_dir}/lfk-mp-benchmark/build-x64/lfk_benchmark/Release/',
+        f'{root_dir}/lfk-mp-benchmark/build-Win32/lfk_benchmark/Release/']
     )
 
 setup(
