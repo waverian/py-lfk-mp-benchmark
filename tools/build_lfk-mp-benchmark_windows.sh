@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 # Copyright (c) 2022 Waverian Team
 
@@ -24,8 +24,14 @@
 
 # check if lfk-mp-benchmark has repository
 
-mkdir -p lfk-mp-benchmark/build
-pushd lfk-mp-benchmark/build
-CMAKE_OSX_ARCHITECTURES="arm64;x86_64" cmake .. -DCMAKE_BUILD_TYPE=Release
-cmake --build .
+mkdir -p lfk-mp-benchmark/build-Win32
+pushd lfk-mp-benchmark/build-Win32
+cmake .. -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=On -A Win32
+cmake --build . --config Release
+popd
+
+mkdir -p lfk-mp-benchmark/build-x64
+pushd lfk-mp-benchmark/build-x64
+cmake .. -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=On -A x64
+cmake --build . --config Release
 popd
