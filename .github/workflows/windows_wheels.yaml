@@ -28,7 +28,7 @@ jobs:
         shell: bash
         run: ./tools/build_lfk-mp-benchmark_windows.sh
       - name: List libs
-        run: ls /D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build-x64 ** ls /D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build-Win32
+        run: ls /D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build-x64 && ls /D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build-Win32
         shell: bash
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
