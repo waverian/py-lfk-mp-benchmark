@@ -20,6 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+set -euo pipefail
+
 # let's build lfk-mp-benchmark
 
 # check if lfk-mp-benchmark has repository
