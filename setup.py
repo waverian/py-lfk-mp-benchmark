@@ -76,8 +76,9 @@ ext = CythonExtension('lfkbenchmark',
     benchy_files,
     include_dirs=[join(root_dir, 'lfk-mp-benchmark', 'lfk_benchmark', 'inc')],
     language="c",
-    libraries=["liblfk-benchmark" if platform == 'win32' else "lfk-benchmark"],
+    libraries=["liblfk-benchmark" if sysconfig.get_platform() == 'mingw' else "lfk-benchmark"],
     library_dirs=[
+        join(root_dir, 'lfk-mp-benchmark', 'build_local', 'cmake_build', 'lfk_benchmark'),
         join(root_dir, 'lfk-mp-benchmark', 'build', 'lfk_benchmark'),
         join(root_dir, 'lfk-mp-benchmark', 'build-x64', 'lfk_benchmark', 'Release'),
         join(root_dir, 'lfk-mp-benchmark', 'build-Win32', 'lfk_benchmark', 'Release')]
