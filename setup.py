@@ -65,22 +65,22 @@ class CythonExtension(Extension):
         self.sources = args[1]
 
 if have_cython:
-    benchy_files = ['py-lfk-mp-benchmark/pylfk_benchmark.pyx']
+    benchy_files = [join('py-lfk-mp-benchmark', 'pylfk_benchmark.pyx'), ]
     cmdclass = {'build_ext': build_ext}
 else:
-    benchy_files = ['pyl-fk-mp-benchmark/pylfk_benchmark.c']
+    benchy_files = [join('pyl-fk-mp-benchmark', 'pylfk_benchmark.c'), ]
     cmdclass = {}
 
 root_dir = abspath(dirname(__file__))
 ext = CythonExtension('lfkbenchmark',
     benchy_files,
-    include_dirs=[f'{root_dir}/lfk-mp-benchmark/lfk_benchmark/inc'],
+    include_dirs=[join(root_dir, 'lfk-mp-benchmark', 'lfk_benchmark', 'inc')],
     language="c",
     libraries=["liblfk-benchmark" if platform == 'win32' else "lfk-benchmark"],
     library_dirs=[
-        f'{root_dir}/lfk-mp-benchmark/build/lfk_benchmark',
-        f'{root_dir}/lfk-mp-benchmark/build-x64/lfk_benchmark/Release/',
-        f'{root_dir}/lfk-mp-benchmark/build-Win32/lfk_benchmark/Release/']
+        join(root_dir, 'lfk-mp-benchmark', 'build', 'lfk_benchmark'),
+        join(root_dir, 'lfk-mp-benchmark', 'build-x64', 'lfk_benchmark', 'Release'),
+        join(root_dir, 'lfk-mp-benchmark', 'build-Win32', 'lfk_benchmark', 'Release')]
     )
 
 setup(
@@ -90,7 +90,7 @@ setup(
     author_email='akshay@kivy.org',
     cmdclass=cmdclass,
     packages=['lfkbenchmark'],
-    package_data={'lfkbenchmark': ['lfk-mp-benchmark/lfk_benchmark/inc/lfk.h', ]},
+    package_data={'lfkbenchmark': [join('lfk-mp-benchmark', 'lfk_benchmark', 'inc', 'lfk.h'), ]},
     package_dir={'lfkbenchmark': 'py-lfk-mp-benchmark'},
     options={'bdist_wheel':{'universal':'1'}},
     ext_modules=[ext],
