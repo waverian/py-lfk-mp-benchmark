@@ -39,6 +39,7 @@ except ImportError:
 
 
 platform = sys.platform
+import sysconfig
 if platform == 'win32':
     cstdarg = '-std=gnu99'
 else:
