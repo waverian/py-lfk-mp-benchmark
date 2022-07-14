@@ -28,6 +28,6 @@ set -euo pipefail
 
 mkdir -p lfk-mp-benchmark/build
 pushd lfk-mp-benchmark/build
-CMAKE_OSX_ARCHITECTURES="arm64;x86_64" cmake .. -DCMAKE_BUILD_TYPE=Release
+CMAKE_OSX_ARCHITECTURES="arm64;x86_64" cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=On -DLFK_BUILD_CONSOLE=Off
 cmake --build .
 popd

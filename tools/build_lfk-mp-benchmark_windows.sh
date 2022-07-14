@@ -28,12 +28,12 @@ set -euo pipefail
 
 mkdir -p lfk-mp-benchmark/build-Win32
 pushd lfk-mp-benchmark/build-Win32
-cmake .. -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=On -A Win32
+cmake .. -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=On -DBUILD_SHARED_LIBS=On -DLFK_BUILD_CONSOLE=Off -A Win32
 cmake --build . --config Release
 popd
 
 mkdir -p lfk-mp-benchmark/build-x64
 pushd lfk-mp-benchmark/build-x64
-cmake .. -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=On -A x64
+cmake .. -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=On -DBUILD_SHARED_LIBS=On -DLFK_BUILD_CONSOLE=Off -A x64
 cmake --build . --config Release
 popd
