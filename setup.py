@@ -81,7 +81,7 @@ ext = CythonExtension('lfkbenchmark',
     library_dirs=[
         join(root_dir, 'lfk-mp-benchmark', 'build_local', 'cmake_build', 'lfk_benchmark'),
         join(root_dir, 'lfk-mp-benchmark', 'build', 'lfk_benchmark'),
-        join(root_dir, 'lfk-mp-benchmark', 'build-x64', 'lfk_benchmark', 'Release'),
+        # join(root_dir, 'lfk-mp-benchmark', 'build-x64', 'lfk_benchmark', 'Release'),
         join(root_dir, 'lfk-mp-benchmark', 'build-Win32', 'lfk_benchmark', 'Release')]
     )
 
