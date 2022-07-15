@@ -6,9 +6,11 @@ jobs:
   build_wheels_win:
     if: (github.event_name == 'create' && github.event.ref_type == 'tag') || contains(github.event.head_commit.message, '[build wheel]') || contains(github.event.head_commit.message, '[build wheel windows]') || contains(github.event.pull_request.title, '[build wheel]') || contains(github.event.pull_request.title, '[build wheel windows]')
     env:
-      CIBW_ENVIRONMENT_WINDOWS: "PATH=$PATH:/D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build-x64/lfk_benchmark/Release:/D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build-Win32/lfk_benchmark/Release:/usr/local/lib"
+      CIBW_ENVIRONMENT_WINDOWS: "PATH=$PATH;D:\\a\\py-lfk-mp-benchmark\\py-lfk-mp-benchmark\\lfk-mp-benchmark\\build-x64\\lfk_benchmark\\Release;D:\\a\\py-lfk-mp-benchmark\\py-lfk-mp-benchmark\\lfk-mp-benchmark\\build-Win32\\lfk_benchmark\\Release"
       CIBW_BUILD: "cp37-win_amd64 cp37-win32 cp38-win32 cp38-win_amd64 cp39-win32 cp39-win_amd64 cp310-win32 cp310-win_amd64"
       CIBW_ARCHS_WINDOWS: "x86 AMD64"
+      CIBW_BEFORE_BUILD_WINDOWS: "pip install delvewheel"
+      CIBW_REPAIR_WHEEL_COMMAND_WINDOWS: "delvewheel repair -w {dest_dir} {wheel}"
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
