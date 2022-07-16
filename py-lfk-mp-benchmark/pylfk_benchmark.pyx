@@ -1,37 +1,3 @@
-# Copyright (c) 2022 Waverian Team
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
-
-'''This is the python module for interfacing with lfk-mp-benchmark.
-
-Usage::
-
-    import lfkbenchmark
-    benchmark = lfkbenchmark.lfk_benchmark()
-    benchmark.console_run_benchmark()
-
-
-Repository: https://github.com/waverian/py-lfk-mp-benchmark
-
-For details of the C module look at https://github.com/waverian/lfk-mp-benchmark
-'''
-
 import os
 import logging
 
@@ -48,7 +14,7 @@ CPU_COUNT = 0
 0:  is auto # os.cpu_count()
 '''
 
-__version__ = '1.0.0-beta2'
+__version__ = 'v1.0.0-Beta.2'
 
 ctypedef void (*benchmark_progress_callback_t)(void *data, int progress,
                                           const char *message)
