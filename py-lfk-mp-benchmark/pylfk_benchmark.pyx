@@ -35,7 +35,7 @@ __version__ = 'v1.0.0-Beta.2'
 ctypedef void (*benchmark_progress_callback_t)(void *data, int progress,
                                           const char *message)
 
-cdef extern from "lfk.h":
+cdef extern from "lfk/lfk.h":
     ctypedef enum lfk_run_type_e:
         single_core_non_optimized,
         multi_core_non_optimized,

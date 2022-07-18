@@ -51,7 +51,7 @@ Let's build  lfk-mp-benchmark submodule.
 
     mkdir -p lfk-mp-benchmark/build
     cd lfk-mp-benchmark/build
-    CMAKE_OSX_ARCHITECTURES="arm64;x86_64" cmake .. -DCMAKE_BUILD_TYPE=Release
+    CMAKE_OSX_ARCHITECTURES="arm64;x86_64" cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=On -DBUILD_CONSOLE_APP=Off
     cmake --build .
 
 
