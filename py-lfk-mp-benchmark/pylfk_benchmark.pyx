@@ -1,3 +1,19 @@
+'''This is the python module for interfacing with lfk-mp-benchmark.
+
+ Usage::
+
+     import lfkbenchmark
+     benchmark = lfkbenchmark.lfk_benchmark()
+     benchmark.console_run_benchmark()
+
+
+ Repository: https://github.com/waverian/py-lfk-mp-benchmark
+
+ For details of the C module look at https://github.com/waverian/lfk-mp-benchmark
+ '''
+ 
+#cython: language_level=3
+
 import os
 import logging
 
