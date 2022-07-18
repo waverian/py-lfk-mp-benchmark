@@ -7,7 +7,7 @@
      benchmark.console_run_benchmark()
 
 
- Repository: https://github.com/waverian/py-lfk-mp-benchmark
+ Repository: https://github.com/waverian/py_lfk_mp_benchmark
 
  For details of the C module look at https://github.com/waverian/lfk-mp-benchmark
  '''

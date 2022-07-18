@@ -24,7 +24,7 @@ Just Fork the repository on github and you should be able to get Github Actions 
 Make sure to either compile the lfk-mp-benchmark library in the root of this repo or just pass the path to the library for compilation.
 
     git --recurse-submodules clone `https://github.com/waverian/py-lfk-benchmark`
-    cd py-lfk-mp-benchmark
+    cd py_lfk_mp_benchmark
 
 ### isolate your build env with a Virtual Environment
 
