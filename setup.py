@@ -31,7 +31,7 @@ use_embed_signature = use_embed_signature or bool(
 
 
 
-with open(join(dirname(__file__), 'py_lfk_mp_benchmark', 'pylfk_benchmark.pyx')) as f:
+with open(join(dirname(__file__), 'py_lfk_mp_benchmark', 'py_lfk_mp_benchmark.pyx')) as f:
     for line in f.readline():
         if line.startswith('__version__'):
             __version__ == line.split('=')[-1].strip()[1:-1]
@@ -53,10 +53,10 @@ class CythonExtension(Extension):
         self.sources = args[1]
 
 if have_cython:
-    benchy_files = [join('py_lfk_mp_benchmark', 'pylfk_benchmark.pyx'), ]
+    benchy_files = [join('py_lfk_mp_benchmark', 'py_lfk_mp_benchmark.pyx'), ]
     cmdclass = {'build_ext': build_ext}
 else:
-    benchy_files = [join('py_lfk_mp_benchmark', 'pylfk_benchmark.c'), ]
+    benchy_files = [join('py_lfk_mp_benchmark', 'py_lfk_mp_benchmark.c'), ]
     cmdclass = {}
 
 root_dir = abspath(dirname(__file__))
