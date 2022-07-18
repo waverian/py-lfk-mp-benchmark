@@ -56,7 +56,7 @@ if have_cython:
     benchy_files = [join('py-lfk-mp-benchmark', 'pylfk_benchmark.pyx'), ]
     cmdclass = {'build_ext': build_ext}
 else:
-    benchy_files = [join('pyl-fk-mp-benchmark', 'pylfk_benchmark.c'), ]
+    benchy_files = [join('py-lfk-mp-benchmark', 'pylfk_benchmark.c'), ]
     cmdclass = {}
 
 root_dir = abspath(dirname(__file__))
