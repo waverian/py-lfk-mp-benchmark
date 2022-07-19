@@ -14,7 +14,7 @@ jobs:
       CIBW_BUILD: "cp37-win_amd64 cp37-win32 cp38-win32 cp38-win_amd64 cp39-win32 cp39-win_amd64 cp310-win32 cp310-win_amd64"
       CIBW_ARCHS_WINDOWS: "x86 AMD64"
       CIBW_BEFORE_BUILD_WINDOWS: "pip install delvewheel==0.0.22"
-      CIBW_REPAIR_WHEEL_COMMAND_WINDOWS: 'delvewheel repair -w {dest_dir} {wheel} --add-path D:\a\py_lfk_mp_benchmark\py_lfk_mp_benchmark\lfk-mp-benchmark\build-x64\lfk_benchmark\Release;D:\a\py_lfk_mp_benchmark\py_lfk_mp_benchmark\lfk-mp-benchmark\build-Win32\lfk_benchmark\Release'
+      CIBW_REPAIR_WHEEL_COMMAND_WINDOWS: 'delvewheel repair -w {dest_dir} {wheel} --add-path D:\a\py-lfk-mp-benchmark\py-lfk-mp-benchmark\lfk-mp-benchmark\build-x64\lfk_benchmark\Release;D:\a\py-lfk-mp-benchmark\py-lfk-mp-benchmark\lfk-mp-benchmark\build-Win32\lfk_benchmark\Release'
       CIBW_TEST_COMMAND: python -c "import lfkbenchmark; print(lfkbenchmark.Benchmark())"
     runs-on: ${{ matrix.os }}
     strategy:
@@ -35,7 +35,7 @@ jobs:
         shell: bash
         run: ./tools/build_lfk-mp-benchmark_windows.sh
       - name: List libs
-        run: ls /D/a/py_lfk_mp_benchmark/py_lfk_mp_benchmark/lfk-mp-benchmark/build-x64 && ls /D/a/py_lfk_mp_benchmark/py_lfk_mp_benchmark/lfk-mp-benchmark/build-Win32
+        run: ls /D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build-x64 && ls /D/a/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build-Win32
         shell: bash
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse

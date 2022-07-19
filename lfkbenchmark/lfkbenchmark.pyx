@@ -7,7 +7,7 @@
      benchmark.console_run_benchmark()
 
 
- Repository: https://github.com/waverian/py_lfk_mp_benchmark
+ Repository: https://github.com/waverian/py-lfk-mp-benchmark
 
  For details of the C module look at https://github.com/waverian/lfk-mp-benchmark
  '''
@@ -15,14 +15,17 @@
 #cython: language_level=3
 
 import os
-import logging
+try:
+    from kivy.logger import Logger
+except ImportError: 
+    import logging
 
-log = logging.getLogger()
-log.setLevel(logging.NOTSET)
-hd = logging.StreamHandler()
-hd.setLevel(logging.NOTSET)
-log.addHandler(hd)
-Logger = log
+    log = logging.getLogger()
+    log.setLevel(logging.NOTSET)
+    hd = logging.StreamHandler()
+    hd.setLevel(logging.NOTSET)
+    log.addHandler(hd)
+    Logger = log
 
 
 CPU_COUNT = 0 

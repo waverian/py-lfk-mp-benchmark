@@ -43,7 +43,7 @@ jobs:
         python -m pip install cibuildwheel==2.3.1
     - name: Build wheels
       run: |
-        export REPAIR_LIBRARY_PATH=~/work/py_lfk_mp_benchmark/py_lfk_mp_benchmark/lfk-mp-benchmark/build/lfk_benchmark
+        export REPAIR_LIBRARY_PATH=~/work/py-lfk-mp-benchmark/py-lfk-mp-benchmark/lfk-mp-benchmark/build/lfk_benchmark
         python -m cibuildwheel --output-dir wheelhouse
     - uses: actions/upload-artifact@v2
       with:
