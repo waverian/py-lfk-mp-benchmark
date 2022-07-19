@@ -3,7 +3,7 @@ import sys
 from os import environ
 from os.path import dirname, join, abspath
 
-if environ.get('FKBENHMARK_USE_SETUPTOOLS'):
+if environ.get('LFKBENHMARK_USE_SETUPTOOLS'):
     from setuptools import setup, Extension
     print('Using setuptools')
 else:
