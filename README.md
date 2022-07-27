@@ -11,7 +11,6 @@ This is a simple Python interface to lfk-mp-benchmark
 
     pip install lfkbenchmark 
 
-Please make sure to use the correct wheel for your architecture.
 
 ## Through Github Actions
 
