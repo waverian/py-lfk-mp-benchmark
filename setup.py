@@ -82,5 +82,5 @@ setup(
     package_dir={'lfkbenchmark': 'lfkbenchmark'},
     options={'bdist_wheel':{'universal':'1'}},
     ext_modules=[ext],
-    version='v1.0.0-Beta.3'
+    version='v1.0.0-Beta.4'
 )
