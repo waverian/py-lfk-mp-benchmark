@@ -40,7 +40,7 @@ on macOS replace auditwheel with delocate
 
 ### Using script
 
-    cd path/to/py-ldk-mp-benchmark
+    cd path/to/py-lfk-mp-benchmark
     sh tools/build_osx_wheel.sh
 
 #### Manual instructions
