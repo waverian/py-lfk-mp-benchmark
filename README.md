@@ -16,7 +16,7 @@ This is a simple Python interface to lfk-mp-benchmark
 
 Just Fork the repository on github and you should be able to get Github Actions to build your library as is. Just commit your changes and you should get a new build.
 
-    link/to/fork/repo
+    git commit -m "commit message [build wheel]"
 
 ## From Source
 
@@ -68,7 +68,7 @@ Should give a output similar to::
 
 On linux your lib probably would be built for your local architecture unless you are using a cross compile toolchain.
 
-Let's build our wheel for py-lfk-benchmark
+Let's build our sources for py-lfk-benchmark
 
     python setup.py build_ext -t build/
 
